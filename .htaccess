@@ -1,0 +1,3 @@
+RewriteEngine On
+Options +FollowSymlinks
+RewriteRule ^(.*)$ Orcas/System/Bootstrap.php?Path=$0 [QSA,L]
