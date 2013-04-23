@@ -27,11 +27,4 @@ class System
 		var_dump(debug_backtrace());
 		die($ErrorStr);
 	}
-	
-	public static function EvalPHP($Code)
-	{
-		ob_start();
-		eval('?><?php $Page = Page::$Current; ?>' . $Code);
-		return ob_get_clean();
-	}
 }

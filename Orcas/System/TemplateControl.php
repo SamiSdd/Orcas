@@ -120,4 +120,11 @@ class TemplateControl extends Control
 	public function ProcessDirective($Directive)
 	{
 	}
+	
+	public function EvalPHP($Code)
+	{
+	    ob_start();
+	    eval('?>' . $Code);
+	    return ob_get_clean();
+	}
 }

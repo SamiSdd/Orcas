@@ -127,7 +127,7 @@ class Page extends TemplateControl
 				$Markup = $this->Master->Render();
 			}
 			
-			$this->Response->Write(System::EvalPHP($Markup));
+			$this->Response->Write($this->EvalPHP($Markup));
 		}
 		else
 		{
